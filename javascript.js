@@ -1,16 +1,17 @@
 const body = document.querySelector('body'),
-    btnDay = document.querySelector('#jsBtnDay'),
-    btnNight = document.querySelector('#jsBtnNight');
+    jsBtn = document.querySelector('#jsBtn');
 
 function main(){
-    btnNight.addEventListener('click',() => {
-        body.style.backgroundColor = 'black';
-        body.style.color = 'white';
-    });
-
-    btnDay.addEventListener('click', () => {
-        body.style.backgroundColor = 'antiquewhite';
-        body.style.color = 'black';
+    jsBtn.addEventListener('click',() => {
+        if(jsBtn.value === "Day"){
+            jsBtn.value = "Night";
+            body.style.backgroundColor = 'antiquewhite';
+            body.style.color = 'black';
+        }else if(jsBtn.value === "Night"){
+            jsBtn.value = "Day";
+            body.style.backgroundColor = 'black';
+            body.style.color = 'white';
+        }
     });
 }
 
